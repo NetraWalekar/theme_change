@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggle</title>
+    <style>
+        h1{
+            text-align: center;
+            font-family: Monotype corsiva;
+        }
+        .img-con{
+            display: flex;
+            justify-content: center;
+        }
+        .img{
+            height: 400px;
+            margin-top: 50px;
+        }
+        .button{
+            background-color: green;
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+            position: fixed;
+            left: 57%;
+            top: 80%;
+            color: white;
+        }
+        .button1{
+            background-color: red;
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+            position: fixed;
+            left: 37%;
+            top: 80%;
+            color: white;
+        }
+        .container{
+            position: fixed;
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Bulb Toggle</h1>
+    <div class="img-con">
+        <div><img src="lightbulb (1).png" alt="" class="img" id="img"></div>
+    </div>
+    <div class="container">
+        <img src="moon.png" alt="" class="moon" height="50px" onclick="dark()">
+        <img src="sun.png" alt=""  class="moon" height="50px" onclick="light()">
+    </div>
+    <button class="button" onclick="on()" id="on">ON</button>
+    <button class="button1" onclick="off()" id="off">OFF</button>
+
+    <script>
+          function on(){
+            const change_img = document.getElementById("img")
+            change_img.src="lightbulb.png";
+          }
+          function off(){
+            const change_img1 = document.getElementById("img")
+            change_img1.src="lightbulb (1).png";
+        }
+        function dark(){
+           const dark = document.getElementById("body")
+           dark.style.backgroundColor="black";
+           dark.style.color="white";
+
+        }
+        function light(){
+           const light = document.getElementById("body")
+           light.style.backgroundColor="white";
+           light.style.color="black";
+
+        }
+    </script>
+</body>
+</html>
